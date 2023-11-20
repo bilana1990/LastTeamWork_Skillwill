@@ -13,6 +13,7 @@
     <title>Last Team Work SKILLWILL</title>
 </head>
 <body>
+    <?php include "backend.php" ?>
     <!-- header section starts -->
     <header>
         <h1>
@@ -43,14 +44,27 @@
     <section class="Our_Service">
         <h2>Our Service</h2>
         <div class="Our_Service_blocks">
+<?php
+    foreach ($services as $service){
+        echo '
         <div class="Ticket_Booking">
+        <img src="'. $service['img'] .'" alt="">
+        <h3>'. $service['h3'] .'</h3>
+        <p>We book all kind of national or international<br>
+            ticket for your destinaion.</p>
+    </div>
+        ';
+    }
+?>
+
+        <!-- <div class="Ticket_Booking">
             <img src="img/Vector.png" alt="">
             <h3>Ticket Booking</h3>
             <p>We book all kind of national or international<br>
                 ticket for your destinaion.</p>
-        </div>
+        </div> -->
 
-        <div class="Hotel_Booking">
+        <!-- <div class="Hotel_Booking">
             <img src="img/carbon_hotel.png" alt="">
             <h3>Hotel Booking</h3>
             <p>We book all kind of national or international<br>
@@ -62,7 +76,7 @@
             <h3> Tour Plan</h3>
             <p>We book all kind of national or international<br>
                 ticket for your destinaion.</p>
-        </div>
+        </div> -->
         </div>
     </section>
     <!-- section Our Service finish -->
